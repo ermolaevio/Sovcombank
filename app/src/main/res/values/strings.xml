@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">SovcombankApp</string>
-    <string name="title_activity_main">MainActivity</string>
+    <!--Main-->
     <string name="openListBtn">Список</string>
     <string name="openTimer">Таймер</string>
+    <!--Timer-->
+    <string name="startTimer">Пуск</string>
+    <string name="closeDialog">Закрыть</string>
+    <string name="dialogMessage">Время вышло</string>
+
 </resources>

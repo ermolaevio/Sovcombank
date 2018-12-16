@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.ermolaevio.sovcombankapp.list.ListActivity;
+import com.example.ermolaevio.sovcombankapp.timer.TimerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,19 +19,15 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClick(View view) {
         switch (view.getId()) {
             case R.id.openListBtn:
-                openList();
+                start(ListActivity.class);
                 break;
             case R.id.openTimerBtn:
-                openTimer();
+                start(TimerActivity.class);
                 break;
         }
     }
 
-    private void openList() {
-        startActivity(new Intent(this, ListActivity.class));
-    }
-
-    private void openTimer() {
-
+    private void start(Class<? extends AppCompatActivity> cls) {
+        startActivity(new Intent(this, cls));
     }
 }
