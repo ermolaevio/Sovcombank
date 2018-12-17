@@ -14,9 +14,10 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemHolder> {
 
+    @NonNull
     private final List<Item> list = new ArrayList<>(100);
 
-    public void setItems(List<Item> items) {
+    void setItems(@NonNull List<Item> items) {
         list.clear();
         list.addAll(items);
         notifyDataSetChanged();
@@ -57,11 +58,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemHolder> {
         }
     }
 
-    public static class Item {
+    static class Item {
         private final String firstText;
         private final String secondText;
 
-        public Item(String firstText, String secondText) {
+        Item(String firstText, String secondText) {
             this.firstText = firstText;
             this.secondText = secondText;
         }

@@ -33,7 +33,7 @@ public class ListActivity extends AppCompatActivity {
 
 
         StringBuilder builder = new StringBuilder("1");
-
+        items.add(new ListAdapter.Item(builder.toString(), "13:50"));
         for (int i = 2; i <= 100; i++) {
             String first = builder.append("_").append(i).toString();
             items.add(new ListAdapter.Item(first, "13:50"));
