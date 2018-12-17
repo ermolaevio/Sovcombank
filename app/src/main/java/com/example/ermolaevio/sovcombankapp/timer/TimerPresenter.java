@@ -31,13 +31,13 @@ public class TimerPresenter extends MvpPresenter<TimerView> {
         // ignore
     }
 
+    public void onCloseDialogClick() {
+        getViewState().hideDialog();
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
         disposables.clear();
-    }
-
-    public void onCloseDialogClick() {
-        getViewState().hideDialog();
     }
 }
